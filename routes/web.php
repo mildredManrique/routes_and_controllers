@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('post');   
 });
 
-Route::resource('/pages', 'PageController'); //7 rutas
+Route::post('post', 'PostController@store')->name('posts.store');
+
+// Route::resource('/pages', 'PageController')->middleware('auth'); //7 rutas
